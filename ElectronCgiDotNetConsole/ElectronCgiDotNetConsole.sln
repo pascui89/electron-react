@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectronCgiDotNetConsole", "ElectronCgiDotNetConsole.csproj", "{8AB7EFAB-5580-4FC5-8BEC-F9B99E33DE27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AB7EFAB-5580-4FC5-8BEC-F9B99E33DE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB7EFAB-5580-4FC5-8BEC-F9B99E33DE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB7EFAB-5580-4FC5-8BEC-F9B99E33DE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB7EFAB-5580-4FC5-8BEC-F9B99E33DE27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45D0AB17-57E8-48B1-9496-D6E14E46838E}
+	EndGlobalSection
+EndGlobal
