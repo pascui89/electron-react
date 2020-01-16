@@ -45,7 +45,7 @@
     "electron-cgi": "0.0.5",
     "file-loader": "^5.0.2",
     "jasmine": "^3.5.0",
-    "jquery": "^1.9.1",
+    "jquery": ">=3.4.0",
     "node-sass": "^4.13.0",
     "popper.js": "^1.16.0",
     "postcss-loader": "^3.0.0",
