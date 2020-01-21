@@ -1,5 +1,12 @@
-import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { Dashboard } from "./components/Dashboard";
+import * as ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import electronReducer from './reducers/ElectronReducer';
+import DashboardContainer from './containers/DashboardContainer';
 
-ReactDOM.render(<Dashboard />, document.getElementById('renderer'));
+const store = createStore(electronReducer);
+ReactDOM.render(
+    <Provider store={store}>
+        <DashboardContainer />
+    </Provider>, document.getElementById('renderer'));
