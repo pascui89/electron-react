@@ -1,4 +1,6 @@
 import { app, BrowserWindow } from "electron";
+const path = require('path')
+const os = require('os')
 
 let window: BrowserWindow | null;
 
@@ -17,7 +19,7 @@ const createWindow = () => {
 
   // Open the DevTools.
   win.webContents.once('dom-ready', () => {
-    //win.webContents.openDevTools();
+    // win.webContents.openDevTools();
   })
 
   // Emitted when the window is closed.

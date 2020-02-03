@@ -6,7 +6,7 @@ export interface IReduxBaseAction {
     payload: any
 }
 
-export default function electronReducer(state: any, action: IReduxBaseAction) {
+const electronReducer = (state: any, action: IReduxBaseAction) => {
     try {
         switch (action.type) {
         case EReduxActionTypes.SETUP_CONNECTION:
@@ -15,15 +15,10 @@ export default function electronReducer(state: any, action: IReduxBaseAction) {
                 connection: new ConnectionBuilder().connectTo('dotnet', 'run', '--project', 'ElectronCgiDotNetConsole').build()
             };
         case EReduxActionTypes.SEND_MESSAGE:
-            let resp: string = "";
-            state.connection.send("greeting", action.payload.message, (response: any) => {
-                resp = response;
-                console.log(`Response handler: ${resp}`);
-                return { 
-                    ...state,
-                    message: resp 
-                };
-            });
+            return { 
+                ...state,
+                message: action.payload.message
+            };
         default:
             return state;
         }
@@ -32,3 +27,5 @@ export default function electronReducer(state: any, action: IReduxBaseAction) {
         return state;
     }
   }
+
+  export default electronReducer;

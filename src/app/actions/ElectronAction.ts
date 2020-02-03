@@ -9,11 +9,15 @@ export const setupConnectionToRestartOnConnectionLost = () => {
     }
 };
 
-export const sendMessage = (message: string) => {
-    return {
-        type: EReduxActionTypes.SEND_MESSAGE,
-        payload: {
-            message: message
-        }
+export const sendMessage = (message: string, connection: any) => {
+    return function (dispatch: any) {
+        connection.send("greeting", message, (response: any) => {
+            dispatch({
+                type: EReduxActionTypes.SEND_MESSAGE,
+                payload: {
+                    message: response
+                }
+            });
+        });
     }
 };
