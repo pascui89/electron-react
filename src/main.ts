@@ -1,5 +1,6 @@
 import { app, BrowserWindow } from "electron";
-import { ElectronCgiUtil } from "./app/utils/ElectronCgiUtils";
+const path = require('path')
+const os = require('os')
 
 let window: BrowserWindow | null;
 
@@ -18,9 +19,7 @@ const createWindow = () => {
 
   // Open the DevTools.
   win.webContents.once('dom-ready', () => {
-    let electronCgi = new ElectronCgiUtil();
-    electronCgi.setupConnectionToRestartOnConnectionLost();
-    electronCgi.sendMessage(win.webContents);
+    // win.webContents.openDevTools();
   })
 
   // Emitted when the window is closed.
