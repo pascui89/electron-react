@@ -1,10 +1,12 @@
 export interface IDashboardProps {
   message: string;
-  connection: any
+  inputValue: string;
+  connection: any;
 }
 
 const initialState: IDashboardProps = {
     connection: null,
+    inputValue: "",
     message: ""
 };
 
