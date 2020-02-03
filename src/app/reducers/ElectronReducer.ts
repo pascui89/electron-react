@@ -14,10 +14,15 @@ const electronReducer = (state: any, action: IReduxBaseAction) => {
                 ...state, 
                 connection: new ConnectionBuilder().connectTo('dotnet', 'run', '--project', 'ElectronCgiDotNetConsole').build()
             };
+        case EReduxActionTypes.CHANGE_INPUT_VALUE:
+            return {
+                ...state,
+                inputValue: action.payload
+            }
         case EReduxActionTypes.SEND_MESSAGE:
             return { 
                 ...state,
-                message: action.payload.message
+                message: action.payload
             };
         default:
             return state;
