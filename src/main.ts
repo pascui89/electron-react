@@ -15,9 +15,9 @@ const createWindow = () => {
   })
 
   // and load the index.html of the app.
-  win.loadFile('index.html')
+  win.loadFile(path.resolve(__dirname, 'index.html'))
 
-  // Open the DevTools.
+  // Open the DevTools.np
   win.webContents.once('dom-ready', () => {
     // win.webContents.openDevTools();
   })
