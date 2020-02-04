@@ -5,6 +5,7 @@ interface IDashboardProps {
   message: string;
   connection: any;
   inputValue: string;
+  feaching: boolean;
   changeInputValue: (e: React.FormEvent<HTMLInputElement>) => void;
   keyPressed: (event: any, connection: any) => void;
   sendMessage: (message: string, connection: any) => void;
@@ -48,4 +49,5 @@ export class Dashboard extends React.Component<IDashboardProps> {
         </div>
       </>;
   }
+
 }

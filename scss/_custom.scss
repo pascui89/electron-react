@@ -4,3 +4,26 @@
     height: 100vh !important;
     margin-bottom: 0 !important;
 }
+
+.alert {
+    width: 100%;
+    margin-bottom: 0 !important;
+    position: absolute !important;
+}
+
+.alert-component {
+    display: none;
+    &_show {
+        opacity: 1;
+        display: block;
+        visibility: visible;
+        transition-delay: 0s;
+    }
+    &_hidden {
+        opacity: 0;
+        display: none;
+        visibility: hidden;
+        -webkit-transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+        transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+    }
+}

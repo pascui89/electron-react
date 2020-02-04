@@ -7,13 +7,14 @@ const mapStateToProps = (state: any) => {
     return {
       message: state.message,
       connection: state.connection,
-      inputValue: state.inputValue
+      inputValue: state.inputValue,
+      feaching: state.feaching
     }
 }
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
-    keyPressed: (event: React.KeyboardEvent<HTMLInputElement>, connection: any) => dispatch(keyPressed(event, connection)),
+    keyPressed: (event: any, connection: any) => dispatch(keyPressed(event, connection)),
     changeInputValue: (e: React.FormEvent<HTMLInputElement>) => dispatch(changeInputValue(e)),
     sendMessage: (message: string, connection: any) => dispatch(sendMessage(message, connection)),
     setupConnectionToRestartOnConnectionLost: () => dispatch(setupConnectionToRestartOnConnectionLost())
