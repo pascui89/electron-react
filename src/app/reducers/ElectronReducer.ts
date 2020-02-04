@@ -24,6 +24,24 @@ const electronReducer = (state: any, action: IReduxBaseAction) => {
                 ...state,
                 message: action.payload
             };
+        case EReduxActionTypes.SHOW__ERROR:
+            return {
+                ...state,
+                error: {
+                    ...state.error,
+                    messageError: action.payload.messageError,
+                    type: action.payload.type,
+                    showMessage: action.payload.showMessage
+                }
+            }
+        case EReduxActionTypes.SET_TOGGLE_ERROR:
+            return {
+                ...state,
+                error: {
+                    ...state.error,
+                    showMessage: action.payload
+                }
+            }
         default:
             return state;
         }
